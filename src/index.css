@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-green: #10b981;
+  --neon-amber: #f59e0b;
+  --neon-cyan: #06b6d4;
+  --neon-red: #ef4444;
+  --dark-bg: #050811;
+  --panel-bg: #0f172a;
+  --panel-border: #1e293b;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #050811;
+  color: #e2e8f0;
+  user-select: none;
+}
+
+/* Custom scanline overlay */
+.scanlines {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+.text-glow-green {
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+.text-glow-amber {
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.6);
+}
+.text-glow-cyan {
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+}
+.text-glow-red {
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+}
+
+/* Active button transitions */
+.d-btn:active {
+  transform: scale(0.92);
+  background-color: #374151;
+}
+
+/* ============================================================================
+   UNIVERSAL LIGHT MODE THEME OVERRIDES (.light-mode)
+   ============================================================================ */
+body.light-mode,
+.light-mode {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.light-mode .scanlines {
+  display: none !important;
+}
+
+.light-mode .bg-slate-950,
+.light-mode .bg-slate-950\/95,
+.light-mode .bg-slate-950\/90,
+.light-mode .bg-slate-950\/88,
+.light-mode .bg-slate-950\/80,
+.light-mode .bg-slate-950\/60 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+.light-mode .bg-slate-900,
+.light-mode .bg-slate-900\/95,
+.light-mode .bg-slate-900\/92,
+.light-mode .bg-slate-900\/90,
+.light-mode .bg-slate-900\/80,
+.light-mode .bg-slate-900\/70,
+.light-mode .glass-panel {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+}
+
+.light-mode .bg-slate-800,
+.light-mode .bg-slate-800\/90,
+.light-mode .bg-slate-800\/80 {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+.light-mode .border-slate-800,
+.light-mode .border-slate-800\/80,
+.light-mode .border-slate-700 {
+  border-color: #cbd5e1 !important;
+}
+
+.light-mode .text-white,
+.light-mode .text-slate-100,
+.light-mode .text-slate-200 {
+  color: #0f172a !important;
+}
+
+.light-mode .text-slate-300 {
+  color: #1e293b !important;
+}
+
+.light-mode .text-slate-400,
+.light-mode .text-slate-500 {
+  color: #475569 !important;
+}
+
+.light-mode .text-emerald-400,
+.light-mode .text-emerald-300 {
+  color: #047857 !important;
+}
+
+.light-mode .text-cyan-400,
+.light-mode .text-cyan-300,
+.light-mode .text-cyan-200 {
+  color: #0369a1 !important;
+}
+
+.light-mode .text-amber-400,
+.light-mode .text-amber-300,
+.light-mode .text-amber-200 {
+  color: #b45309 !important;
+}
+
+.light-mode .text-purple-400,
+.light-mode .text-purple-300,
+.light-mode .text-purple-200 {
+  color: #6d28d9 !important;
+}
+
+.light-mode .bg-emerald-950\/60,
+.light-mode .bg-emerald-950\/50,
+.light-mode .bg-emerald-950\/40,
+.light-mode .bg-emerald-950 {
+  background-color: #d1fae5 !important;
+}
+
+.light-mode .bg-cyan-950\/95,
+.light-mode .bg-cyan-950\/80,
+.light-mode .bg-cyan-950\/70,
+.light-mode .bg-cyan-950\/50,
+.light-mode .bg-cyan-950 {
+  background-color: #e0f2fe !important;
+}
+
+.light-mode .bg-amber-950\/95,
+.light-mode .bg-amber-950\/90,
+.light-mode .bg-amber-950\/80,
+.light-mode .bg-amber-950\/60 {
+  background-color: #fef3c7 !important;
+}
+
+.light-mode .bg-purple-950\/95,
+.light-mode .bg-purple-950\/80 {
+  background-color: #ede9fe !important;
+}
+
+.light-mode .bg-red-950\/80,
+.light-mode .bg-red-950\/60 {
+  background-color: #fee2e2 !important;
+}
